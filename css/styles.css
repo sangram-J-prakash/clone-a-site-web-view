@@ -773,6 +773,7 @@ transform: rotate(360deg);
 nav .fa{
     display: none;
 }
+
 @media (max-width: 760px) {
     .h1 {
         font-size: 20px; /* Smaller heading size */
@@ -793,7 +794,7 @@ nav .fa{
         height: 80px;
     }
     .nav-links{
-        position:absolute;
+        position:fixed;
         background:#9c9ee9;
         height:100vh;
         width: 200px;
