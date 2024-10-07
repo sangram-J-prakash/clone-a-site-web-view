@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT Marketplace - Buying and Selling Creativity</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
+    <section class="header">
         
         <nav>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()" ></i>
             <ul>
                 <li><a href="#">NFT</a></li>
                 <li><a href="#">Crypto</a></li>
@@ -19,17 +22,18 @@
                 <li><a href="#">Shop Cart</a></li>
                 <li><a href="#" class="add-wallet-btn">Add Wallet</a></li>
             </ul>
+            </div>
+            <i class="fa fa-bars"onclick="showMenu()" ></i>
         </nav>
-    </header>
-    
-
-   
-        <section class="hero">
+      
             <div class="container1">
                 <div class="logo">Toka</div>
+                <div class="text-box">
                 <h1>Buying and Selling of Creativity</h1>
                 <p>Make the Economy More Creative</p>
+                
                 <a href="#" class="btn-hero">Explore Marketplace</a>
+            </div>
                 <div class="line-1"></div>
         
                 <!-- MP4 Video instead of PNG Image -->
@@ -39,7 +43,16 @@
                 </video> -->
             </div>
         </section>
-
+        <!--Javascript for toogle manue-->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+    function hideMenu(){
+        navLinks.style.right = "-200px";
+    }
+</script>
    <!--The cartoon-->
 
         <section class="the-cartoon">
@@ -74,13 +87,14 @@
                         </div>
                         <a href="#" class="place-bid-btn-1">Place a Bid</a>
                     </div>
-                </div>
-        
+               
+        </div>
                 <!-- Right Content -->
+                 <div class="cartoon-image-1">
                 <img src="./cartoon1.png" alt="Cartoon Character" class="cartoon-image">
             </div>
         
-            
+            </div>
         
         </section>
 
@@ -183,7 +197,9 @@
                 <div class="text-content-2">
                     <h1>WHY IT IS NEEDED TO BUY NFT?</h1>
                     <p>A non-fungible token is a unit of data stored on a digital ledger, called a blockchain, that certifies a digital asset to be unique and therefore not interchangeable. NFTs can be used to represent items such as photos, videos, audio, and other types of digital files.</p>
+                    <div class="buy-nft-butn">
                     <button class="button-3">START NOW</button>
+                    </div>
                 </div>
         
                 <!-- Right Side: Image -->
@@ -237,7 +253,7 @@
         <footer>
             <div class="footer-section">
                 <img src="./logo2.png" alt="Logo"> 
-               <div>
+               <div class="about-footer">
                 <h3>About:</h3>
                 <p>Reinventing the way of creating websites, we aim to create the most master-peaced WordPress theme available on the market.</p>
             </div>
@@ -253,7 +269,7 @@
     </div>
             <div class="footer-section">
         <img src="./logo2.png" alt="Logo"> 
-               <div>
+               <div class="email-form-subscribe">
                 <h3>Sign Up for Email Updates</h3>
                 <form class="email-form">
                     <input type="email" placeholder="Enter your Email" required><br>
