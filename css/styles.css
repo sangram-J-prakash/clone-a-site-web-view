@@ -18,6 +18,18 @@ nav{
     
     
 }
+.logo1 {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 50px; /* Adjust the width as per your logo size */
+    height: auto;  /* Ensures the aspect ratio remains intact */
+    margin-left: -10px;
+   
+}
+
+
+
 .nav-links{
     flex:1;
     text-align: right;
@@ -64,7 +76,7 @@ nav{
 }
 
 .add-wallet-btn {
-   /* border:2px solid #24D0C9; */
+   border:2px solid #24D0C9;
     color: white;
     padding: 8px 20px;
     border-radius: 50px;
@@ -100,14 +112,25 @@ body {
 
 .logo {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    width: 50px; /* Adjust the width as per your logo size */
+    height: auto;  /* Ensures the aspect ratio remains intact */
+    margin-left: -10px;
+   
+    
+}
+.logo2{
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 120px; /* Adjust the width as per your logo size */
+    height: auto;  /* Ensures the aspect ratio remains intact */
+    margin-left: 40px;
 }
 
 .h1 {
-    font-size: 46px;
+    font-size: 80px;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -118,21 +141,115 @@ body {
     margin-bottom: 50px;
     font-weight: 300;
 }
+.text-box h1 {
+    font-size: 50px; /* Change this value to your preferred size */
+}
 
-.btn-hero {
-    background-color: #c2ffc2;
-    color: #252c55;
-    padding: 15px 30px;
-    border-radius: 30px;
+
+
+.wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-hero {
+    min-width: 300px;
+    min-height: 60px;
+    display: inline-flex;
+    font-family: 'Nunito', sans-serif;
     font-size: 18px;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-}
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+    background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 15px 30px;
+    top: -60px; 
+    }
+  
+  .btn-hero::before {
+  content: '';
+    border-radius: 30px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .btn-hero:hover, 
+  .btn-hero:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  .btn-hero:hover::before, 
+  .btn-hero:focus::before {
+    opacity: 1;
+  }
+  
+  .btn-hero::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  .btn-hero:hover::after, 
+  .btn-hero:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
 
-.btn-hero:hover {
-    background-color: #a8f5a8;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .line-1 {
     width: 70%;
@@ -447,7 +564,7 @@ p {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-      margin-top: 40px;
+    margin-top: 40px;
 }
  .button-1:hover {
     background-color: #a8f5a8;
@@ -757,6 +874,10 @@ footer {
     cursor: pointer;
     width: 75%;
 }
+.email-form-subscribe1{
+    display: none;
+}
+
 /* Keyframes for rotation */
 @keyframes rotate {
 from {
@@ -766,6 +887,35 @@ to {
 transform: rotate(360deg);
 }
 }
+
+/* Feedback Button Styling */
+.feedback-button-1 {
+    position: fixed;
+    right: -45px;
+    bottom: 300px;
+    transform: translateY(-50%) rotate(90deg);
+    background-color:#500080;
+    color:white;
+    border:none;
+    padding: 10px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius:0 0 10px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+   
+   
+    z-index: 1000;
+    
+    
+}
+
+.feedback-button:hover {
+    background-color: #2d0b35; /* Hover effect */
+}
+
 
 /* mob-view */
 
@@ -859,6 +1009,9 @@ nav .fa{
         display: none;
        
     }
+    .text-box h1 {
+        font-size: 30px; /* Change this value to your preferred size */
+    }
 
     .circle-button {
         width: 150px; /* Smaller circle button */
@@ -875,52 +1028,100 @@ nav .fa{
         height: auto; /* Maintain aspect ratio */
         margin-left: 0; /* Remove left margin */
     }
-    .footer{
-        flex-direction: column;
-        align-items: center;
-
-    }
+   
     .footer-section{
         width: 100%;
-        margin-bottom: 20px
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 20px 0;
+
         
     }
 
     .footer-section img {
-        display: none;
+        display: none;    
+    }
+     .contact-us {
+        width: 100%;
+        text-align: center;
+    }
+    .email-form1 {
+        display: flex;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    
+    }
+    .email-form{
+        display: none; 
+
+    }
+    .email-form-subscribe{
+        display: none; 
+
+    }
+
+    .email-form1 input[type="email"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 30px 0 0 30px;
+        outline: none;
+        font-size: 16px;
+        flex: 1;
        
 
-    
-        
+    }
+
+    .email-form1 input[type="submit"] {
+        padding: 10px 20px;
+    border: none;
+    background-color: #9d9aff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0 30px 30px 0;
+
+    }
+
+    .email-form1 input[type="submit"]:hover {
+        background-color: #7a79ff;
+    }
+    .email-form-subscribe1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: -400px;
+        margin-top: 150px;
+
+    }
+    .logo1{
+        display: none;
     }
     .about-footer{
         display: none;
     }
-
-    .email-form input[type="email"] {
-        width: 100%; /* Wider input fields */
-        flex-direction: column;
-        font-size: 10px;
-        padding: 10px ;
-        
-    }
-    .email-form input[type="submit"]
-    {
-        font-size: 10px;
-        width: 100%;
-        margin-left: 12px;
-    }
-    .text-section-2 a{
-        font-size: 15px;
-        padding: 0px 15px;
-        margin-left: 50px;
     
-        
-    }
-    .email-form-subscribe{
-        flex-direction: column;
 
     }
 
+    #scrollToTopBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        display: none;
+        background-color: #38245ee3;
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 18px;
+        cursor: pointer;
     }
-
+    
+    #scrollToTopBtn:hover {
+        background-color: #555;
+    }
+    

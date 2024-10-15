@@ -6,11 +6,16 @@
     <title>NFT Marketplace - Buying and Selling Creativity</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+   
+
 </head>
 <body>
     <section class="header">
+        <a href="#"><img src="./Logonav.png" class="logo1" alt="logo"></a>
         
         <nav>
+            
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onclick="hideMenu()" ></i>
             <ul>
@@ -27,12 +32,15 @@
         </nav>
       
             <div class="container1">
-                <div class="logo">Toka</div>
+                <a href="#"><img src="./Logonav.png" class="logo" alt="Logo"></a>
+            <a href="#"><img src="./logonft.png" class="logo2" alt="Logo"></a>
+                <!-- <div class="logo1">NFT Market</div> -->
                 <div class="text-box">
                 <h1>Buying and Selling of Creativity</h1>
                 <p>Make the Economy More Creative</p>
-                
-                <a href="#" class="btn-hero">Explore Marketplace</a>
+                <div class="wrap">
+                <button class ="btn-hero">Explore Marketplace</a>
+                </div>
             </div>
                 <div class="line-1"></div>
         
@@ -263,7 +271,7 @@
                     <a href="#" class="primary-btn-1">Click Here</a>
                 </div>
             </div>
-    
+            
         <footer>
             <div class="footer-section">
                 <img src="./logo2.png" alt="Logo"> 
@@ -291,17 +299,57 @@
                 </form>
             </div>
     </div>
-        </footer>
 
-    </section>
-    
-
+    <div class="email-form-subscribe1">
+        <form class="email-form1">
+            <input type="email" placeholder="Enter your Email" required><br>
+            <input type="submit" value="SUBSCRIBE">
+        </form>
+    </div>
 
    
+       
+   
+    
+        </footer>
+    </section>
+        <div class="feedback-button">
+            <div id="saylo-widget" style="width: 350px;">
+               
+                 <button class="feedback-button-1">Feedback</button>
+              
+            </div>
+        </div>
+
+        <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+        <script>
+            // Get the button
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show the button when the user scrolls down 20px
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+};
+
+// Scroll to the top when the button is clicked
+scrollToTopBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
 
 
+            </script>
+
+    
+  
 
 
+  
 
 
     
